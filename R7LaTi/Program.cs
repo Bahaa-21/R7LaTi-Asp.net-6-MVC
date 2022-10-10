@@ -1,7 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+using R7LaTi.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddMvc();
+
+// Adding Conniction String
+builder.Services.AddDbContext<ApplicationDbContext>(
+    option => option.UseSqlServer(builder.Configuration.GetConnectionString("MyConnection"))
+);
+
 
 var app = builder.Build();
 
