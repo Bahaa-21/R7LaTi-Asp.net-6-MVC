@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using R7LaTi.Configurations;
 using R7LaTi.Data;
+using R7LaTi.IRepository;
+using R7LaTi.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +15,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(
     option => option.UseSqlServer(builder.Configuration.GetConnectionString("MyConnection"))
 );
 
+//Adding an AutoMapper
+builder.Services.AddAutoMapper(typeof(MapperInitilaizer));
+
+//Adding a Scoped Service
+builder.Services.AddScoped<IUnitOfWork , UnitOfWork>();
 
 var app = builder.Build();
 

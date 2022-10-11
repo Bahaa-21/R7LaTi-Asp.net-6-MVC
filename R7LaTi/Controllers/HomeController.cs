@@ -1,21 +1,26 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using R7LaTi.IRepository;
 using R7LaTi.Models;
+using R7LaTi.ViewModel;
 using System.Diagnostics;
 
 namespace R7LaTi.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IUnitOfWork _service ;
+        private readonly IMapper _mapper;
         private readonly ILogger<HomeController> _logger;
+        public HomeController(ILogger<HomeController> logger, IUnitOfWork service, IMapper mapper) => 
+        (_logger, _service, _mapper) = (logger, service, mapper);
 
-        public HomeController(ILogger<HomeController> logger)
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
-            _logger = logger;
-        }
-
-        public IActionResult Index()
-        {
-            return View();
+            var trip = await _service.Trips.GetAllAsync();
+            var response = _mapper.Map<IEnumerable<TripVM>>(trip);
+            return View(response);
         }
 
         public IActionResult Privacy()
