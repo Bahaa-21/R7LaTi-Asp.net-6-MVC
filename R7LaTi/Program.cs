@@ -1,5 +1,5 @@
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using R7LaTi.Configurations;
 using R7LaTi.Data;
 using R7LaTi.IRepository;
 using R7LaTi.Repository;
@@ -16,7 +16,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(
 );
 
 //Adding an AutoMapper
-builder.Services.AddAutoMapper(typeof(MapperInitilaizer));
+
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
 //Adding a Scoped Service
 builder.Services.AddScoped<IUnitOfWork , UnitOfWork>();
@@ -35,6 +36,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseFileServer();
+
 
 app.UseAuthorization();
 

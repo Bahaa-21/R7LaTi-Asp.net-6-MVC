@@ -12,7 +12,11 @@ public class GenericRepo<T> : IGenericRepo<T> where T : class
     private readonly ApplicationDbContext _context;
     private readonly DbSet<T> _db;
 
-    public GenericRepo(ApplicationDbContext context) => (_context, _db) = (context, _context.Set<T>());
+    public GenericRepo(ApplicationDbContext context)
+    {
+        _context = context;
+        _db = _context.Set<T>();
+    }
 
     public async Task DeleteAsync(int id)
     {

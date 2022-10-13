@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "X0hygNqpePOFDmsPQPiEZkLAAXdqHS6n8jWJ3VUQHxs=",
+  "Hash": "FaL7E5yfNFUC9KTcagP5qfWudJoeVS3sTo5rKC8P6h8=",
   "Source": "R7LaTi",
   "BasePath": "_content/R7LaTi",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\My-Git\\R7LaTi-Project\\R7LaTi\\R7LaTi\\wwwroot\\css\\StylePage.css",
+      "SourceId": "R7LaTi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\My-Git\\R7LaTi-Project\\R7LaTi\\R7LaTi\\wwwroot\\",
+      "BasePath": "_content/R7LaTi",
+      "RelativePath": "css/StylePage.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\StylePage.css"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\My-Git\\R7LaTi-Project\\R7LaTi\\R7LaTi\\wwwroot\\favicon.ico",

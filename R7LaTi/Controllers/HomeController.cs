@@ -19,8 +19,7 @@ namespace R7LaTi.Controllers
         public async Task<IActionResult> Index()
         {
             var trip = await _service.Trips.GetAllAsync();
-            var response = _mapper.Map<IEnumerable<TripVM>>(trip);
-            return View(response);
+            return View(_mapper.Map<IEnumerable<TripVM>>(trip));
         }
 
         public IActionResult Privacy()
