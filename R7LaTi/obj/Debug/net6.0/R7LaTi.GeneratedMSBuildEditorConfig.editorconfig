@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\User\Desktop\My-Git\R7LaTi-Project\R7LaTi\R7LaTi
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/User/Desktop/My-Git/R7LaTi-Project/R7LaTi/R7LaTi/Views/Home/DetailTrip.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhaWxUcmlwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/Desktop/My-Git/R7LaTi-Project/R7LaTi/R7LaTi/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

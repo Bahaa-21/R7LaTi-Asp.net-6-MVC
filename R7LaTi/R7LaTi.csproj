@@ -26,7 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Photos\" />
     <Folder Include="ViewModel\" />
   </ItemGroup>
 

@@ -22,6 +22,11 @@ namespace R7LaTi.Controllers
             return View(_mapper.Map<IEnumerable<TripVM>>(trip));
         }
 
+        public async Task<IActionResult> DetailTrip(int id)
+        {
+            var trip = await _service.Trips.GetAsync(i => i.Id == id);
+            return View(_mapper.Map<TripVM>(trip));
+        }
         public IActionResult Privacy()
         {
             return View();
