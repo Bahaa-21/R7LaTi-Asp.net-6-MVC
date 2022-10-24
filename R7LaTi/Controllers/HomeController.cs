@@ -7,6 +7,7 @@ using System.Diagnostics;
 
 namespace R7LaTi.Controllers
 {
+    
     public class HomeController : Controller
     {
         private readonly IUnitOfWork _service ;
@@ -18,24 +19,16 @@ namespace R7LaTi.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
+            
             var trip = await _service.Trips.GetAllAsync();
             return View(_mapper.Map<IEnumerable<TripVM>>(trip));
         }
-
+        
+        [HttpGet]
         public async Task<IActionResult> DetailTrip(int id)
         {
             var trip = await _service.Trips.GetAsync(i => i.Id == id);
             return View(_mapper.Map<TripVM>(trip));
-        }
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

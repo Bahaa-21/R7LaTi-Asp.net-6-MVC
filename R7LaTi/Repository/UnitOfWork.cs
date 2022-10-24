@@ -9,17 +9,14 @@ public class UnitOfWork : IUnitOfWork
     private readonly ApplicationDbContext _context;
 
     private IGenericRepo<Trip> _trip;
-    private IGenericRepo<Customer> _customer;
     private IGenericRepo<Organizer> _organizer;
-    private IGenericRepo<CustomersTrips> _customersTrips;
+    private IGenericRepo<UserTrips> _customersTrips;
 
     public UnitOfWork(ApplicationDbContext context) => _context = context;
 
     public IGenericRepo<Organizer> Organizers => _organizer ??= new GenericRepo<Organizer>(_context);
 
-    public IGenericRepo<Customer> Customers => _customer ??= new GenericRepo<Customer>(_context);
-
-    public IGenericRepo<CustomersTrips> CustomersTrips => _customersTrips ??= new GenericRepo<CustomersTrips>(_context);
+    public IGenericRepo<UserTrips> CustomersTrips => _customersTrips ??= new GenericRepo<UserTrips>(_context);
 
     public IGenericRepo<Trip> Trips => _trip ??= new GenericRepo<Trip>(_context);
 

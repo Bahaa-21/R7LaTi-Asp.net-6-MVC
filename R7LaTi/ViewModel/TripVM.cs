@@ -5,7 +5,7 @@ namespace R7LaTi.ViewModel
     public class TripVM
     {
         public int Id { get; set; }
-        
+        [Display(Name = "Start Going")]
         public DateTime DateStart { get; set; }
         
         public DateTime DateEnd { get; set; }

@@ -120,7 +120,7 @@ button:not(:disabled) {
 
 /*                             Start Header                              */
 header {
-    background: url('../image/pexels-leah-kelley-3935702.jpg') no-repeat fixed center center;
+    background: url('../images/pexels-leah-kelley-3935702.jpg') no-repeat fixed center center;
     background-size: cover;
     padding: 0 0 60px 0;
     margin-top: 0;

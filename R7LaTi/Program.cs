@@ -1,7 +1,9 @@
 using AutoMapper;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using R7LaTi.Data;
 using R7LaTi.IRepository;
+using R7LaTi.Models;
 using R7LaTi.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +23,10 @@ builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
 //Adding a Scoped Service
 builder.Services.AddScoped<IUnitOfWork , UnitOfWork>();
+
+//Adding an Idintity
+builder.Services.AddIdentity<ApplicationUsers, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
 var app = builder.Build();
 

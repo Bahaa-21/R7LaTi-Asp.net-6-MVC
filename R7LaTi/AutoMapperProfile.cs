@@ -10,7 +10,7 @@ public class AutoMapperProfile : Profile
     {
         CreateMap<Trip, TripVM>().ReverseMap();
 
-        CreateMap<Customer, CustomerVM>().ReverseMap();
+        
 
         CreateMap<Organizer, OrganizerVM>().ReverseMap();
     }
